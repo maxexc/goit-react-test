@@ -1,19 +1,27 @@
-import React, { Component } from 'react';
-// import Counter from './components/Counter';
+import React from 'react';
+import Counter from './Counter/Counter';
 
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template TEST ))
-    </div>
-  );
-};
+export const App = () => (
+  <>
+    <h1>Состояние компонента</h1>
+    <Counter />
+  </>
+)
+
+
+// export const App = () => {
+//   return (
+//     <div
+//       style={{
+//         height: '100vh',
+//         display: 'flex',
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//         fontSize: 40,
+//         color: '#010101'
+//       }}
+//     >
+//       React homework template TEST ))
+//     </div>
+//   );
+// };
