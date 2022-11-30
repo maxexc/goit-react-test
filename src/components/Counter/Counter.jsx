@@ -16,19 +16,25 @@ class Counter extends React.Component {
     }
 
     handleIncrement = (event) => {
-        this.setState ({value: 4,})
-        console.log('Кликнули в увеличить');
-        const {target} = event;
+        this.setState(prevState => ({
+            value: prevState.value +1,
+        }))
+        // this.setState ({value: 4,})
+        // console.log('Кликнули в увеличить');
+        // const {target} = event;
 
-        setTimeout(() => {
-            console.log(target)
-        }, 1000)        
+        // setTimeout(() => {
+        //     console.log(target)
+        // }, 1000)        
     }
 
     handleDecrement = (event) => {
-        this.setState ({value: 6,})
-        console.log('Кликнули в уменьшить');
-        console.log(this.state.value)
+        this.setState(prevState => ({
+            value: prevState.value -1,
+        }))
+        // this.setState ({value: 6,})
+        // console.log('Кликнули в уменьшить');
+        // console.log(this.state.value)
         
     }
 
