@@ -6,13 +6,17 @@ import './Counter.css';
 
 
 class Counter extends React.Component {
-    constructor() {
-        super();
+    // constructor() {
+    //     super();
+    //     this.state = { value: 5, }
+    // }
 
-        this.state = { value: 5, }
+    state = {
+        value: 7
     }
 
     handleIncrement = (event) => {
+        this.setState ({value: 4,})
         console.log('Кликнули в увеличить');
         const {target} = event;
 
@@ -22,8 +26,9 @@ class Counter extends React.Component {
     }
 
     handleDecrement = (event) => {
+        this.setState ({value: 6,})
         console.log('Кликнули в уменьшить');
-        console.log(event.type)
+        console.log(this.state.value)
         
     }
 
