@@ -6,18 +6,40 @@ import './Counter.css';
 
 
 class Counter extends React.Component {
+    constructor() {
+        super();
+
+        this.state = { value: 5, }
+    }
+
+    handleIncrement = (event) => {
+        console.log('Кликнули в увеличить');
+        const {target} = event;
+
+        setTimeout(() => {
+            console.log(target)
+        }, 1000)        
+    }
+
+    handleDecrement = (event) => {
+        console.log('Кликнули в уменьшить');
+        console.log(event.type)
+        
+    }
+
+
+
+
     render() {
         return (
             <div className='Counter'>
-                <span className='Counter__value'>0</span>
+                <span className='Counter__value'>{this.state.value}</span>
                 <div className='Counter__controls'>
                     <button type='button' 
-                    onClick={() => { 
-                        console.log('Кликнули в увеличить')}}
+                    onClick={this.handleIncrement}
                         >Увеличить на 1</button>
                     <button type='button'
-                    onClick={() => { 
-                        console.log('Кликнули в уменьшить')}}
+                    onClick={this.handleDecrement}
                         >Уменьшить на 1</button>
                 </div>
             </div>
