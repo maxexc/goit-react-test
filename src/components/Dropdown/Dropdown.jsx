@@ -27,7 +27,11 @@ class Dropdown extends Component {
                 Скрыть
                 </button>
 
-                <div className="Dropdown__menu">Выпадающее меню</div>
+                
+                {/* {x && y} */} 
+                {this.state.visible && (
+                    <div className="Dropdown__menu">Выпадающее меню</div>
+                )}
             </div>
         )
     }
