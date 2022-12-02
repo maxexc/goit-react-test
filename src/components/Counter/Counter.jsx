@@ -8,13 +8,22 @@ import './Counter.css';
 
 
 class Counter extends React.Component {
+    static defaultProps = {
+        initialValue: 0,
+    };
+
+    static porpTypes = {
+        // 
+    }
+
+
     // constructor() {
     //     super();
     //     this.state = { value: 5, }
     // }
 
     state = {
-        value: 7
+        value: this.props.initialValue,
     }
 
     handleIncrement = (event) => {

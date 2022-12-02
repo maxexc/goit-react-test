@@ -5,10 +5,11 @@ import Dropdown from './Dropdown/Dropdown'
 export const App = () => (
   <>
     <h1>Состояние компонента</h1>
-    <Counter />
+    <Counter initialValue={10} />
     <Dropdown />
   </>
 )
+
 
 
 // export const App = () => {
