@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import ColorPicker from './ColorPicker';
 import Counter from './Counter';
 import Dropdown from './Dropdown'
+import initialTodos from '../todos.json'
 import TodoList from './TodoList';
+
 
 const colorPickerOptions = [
   { label: 'red', color: '#F44336' },
@@ -15,11 +17,7 @@ const colorPickerOptions = [
 
 class App extends Component {
   state = {
-    todos: [
-      {id: 'id-1', text: 'Выучить основы React', completed: false},
-      {id: 'id-1', text: 'Разобраться с React Router', completed: false},
-      {id: 'id-1', text: 'Пережить Redux', completed: false},
-    ],
+    todos: initialTodos,     
    }
   render() {
     const {todos} = this.state

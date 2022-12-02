@@ -1,9 +1,12 @@
 import React from 'react';
 
-const TodoList = ({todos}) => {
+const TodoList = ({todos}) => 
     <ul>
-        TodoList  
+        {todos.map(({id, text}) => <li key={id}>
+            <p>{text}</p>
+            <button>Удалить</button>
+            </li>)} 
     </ul>
-}
 
-export default TodoList;
+
+export default TodoList; 
