@@ -27,19 +27,30 @@ class App extends Component {
    }
 
 
-  render() {
-    const {todos} = this.state
+  render() { 
+    const {todos} = this.state;
+    const completedTodos = todos.reduce(
+      (acc,todo) => (todo.completed ? acc + 1 : acc), 0, );
+    console.log(completedTodos);
+
     return (
       <>
     <h1>Состояние компонента</h1>
     <Counter initialValue={10} />
     <Dropdown />
     <ColorPicker options={colorPickerOptions} />
+    {/* <hr></hr> */}
+    <div className='List'>
+      <span>Общее кол-во: {todos.length}</span>
+      <span>Кол-во выполненных: </span>
+    </div>
     <TodoList todos={todos} onDeleteTodo={this.deleteTodo}/>
   </>
     );
   }
 }
+
+export default App;
 
 // const App = () => (
 //   <>
@@ -51,22 +62,4 @@ class App extends Component {
 //   </>
 // )
 
-export default App;
 
-
-// export const App = () => {
-//   return (
-//     <div
-//       style={{
-//         height: '100vh',
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         fontSize: 40,
-//         color: '#010101'
-//       }}
-//     >
-//       React homework template TEST ))
-//     </div>
-//   );
-// };
