@@ -19,6 +19,14 @@ class App extends Component {
   state = {
     todos: initialTodos,     
    }
+
+   deleteTodo =(todoId) => {
+    this.setState(prevState => ({
+      todos: prevState.todos.filter(todo => todo.id !== todoId),
+    }))
+   }
+
+
   render() {
     const {todos} = this.state
     return (
@@ -27,7 +35,7 @@ class App extends Component {
     <Counter initialValue={10} />
     <Dropdown />
     <ColorPicker options={colorPickerOptions} />
-    <TodoList todos={todos}/>
+    <TodoList todos={todos} onDeleteTodo={this.deleteTodo}/>
   </>
     );
   }
