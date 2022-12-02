@@ -19,6 +19,6 @@
     transition: transform 250ms linear;
 }
 
-.ColorPicker__option--active {
+.ColorPicker__option--active {    
     transform: scale(1.2);
 }
