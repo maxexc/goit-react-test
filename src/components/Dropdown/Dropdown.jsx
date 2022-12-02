@@ -23,6 +23,7 @@ class Dropdown extends Component {
 
 
     render() {
+        const {visible} = this.state;
         return ( 
             <div className='Dropdown'>
                 <button
@@ -32,18 +33,15 @@ class Dropdown extends Component {
                     onMouseOver={this.toggle}
                 >                  
                     
-                    {this.state.visible ? 'Скрыть' : 'Показать'}
+                    {visible ? 'Скрыть' : 'Показать'}
                 </button>
 
                 {/* <button type="button" className='Dropdown__toggle' onClick={ this.show} >
                 Показать
                 </button> */}
-
                 {/* <button type="button" className='Dropdown__toggle' onClick={ this.hide} >
                 Скрыть
-                </button> */}
-
-                
+                </button> */}                
                 {/* {x && y} */} 
                 {this.state.visible && (
                     <div className="Dropdown__menu">Выпадающее меню</div>
