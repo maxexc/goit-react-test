@@ -29,9 +29,11 @@ class App extends Component {
 
   render() { 
     const {todos} = this.state;
-    const completedTodos = todos.reduce(
+
+    const totalTodoCount = todos.length;
+    const completedTodosCount = todos.reduce(
       (acc,todo) => (todo.completed ? acc + 1 : acc), 0, );
-    console.log(completedTodos);
+    console.log(completedTodosCount);
 
     return (
       <>
@@ -41,8 +43,8 @@ class App extends Component {
     <ColorPicker options={colorPickerOptions} />
     {/* <hr></hr> */}
     <div className='List'>
-      <span>Общее кол-во: {todos.length}</span>
-      <span>Кол-во выполненных: </span>
+      <span>Общее кол-во: {totalTodoCount}</span>
+      <span>Кол-во выполненных: {completedTodosCount} </span>
     </div>
     <TodoList todos={todos} onDeleteTodo={this.deleteTodo}/>
   </>
