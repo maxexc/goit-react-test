@@ -1,11 +1,13 @@
 import React from 'react';
+import './TodoList.css'
 
 const TodoList = ({todos}) => 
     <ul>
-        {todos.map(({id, text}) => <li key={id}>
-            <p>{text}</p>
+        {todos.map(({id, text}) => 
+        <li key={id} className='TodoList__item'>
+            <p TodoList__text>{text}</p>
             <button>Удалить</button>
-            </li>)} 
+        </li>)} 
     </ul>
 
 
