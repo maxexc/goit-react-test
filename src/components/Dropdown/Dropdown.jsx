@@ -30,7 +30,7 @@ class Dropdown extends Component {
                     type="button"
                     className='Dropdown__toggle'
                     onClick={this.toggle}
-                    onMouseOver={this.toggle}
+                    // onMouseOver={this.toggle}
                 >                  
                     
                     {visible ? 'Скрыть' : 'Показать'}
